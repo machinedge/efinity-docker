@@ -37,11 +37,11 @@ RUN apt-get update && apt-get install -y \
     libgl1-mesa-dri \
     libdbus-1-3
 
-# Copy the efinity directory to the container
+# Copy the efinity directory to the image
 COPY ./efinity /efinity
 
 
-# set container env variables
+# set env variables in the image
 ENV EFINITY_HOME="/efinity/2023.2"
 
 ENV EFXPT_HOME="${EFINITY_HOME}/pt"
