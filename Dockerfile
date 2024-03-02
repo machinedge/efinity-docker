@@ -44,7 +44,7 @@ RUN apt-get update && apt-get install -y \
 COPY ./requirements.txt /tmp/requirements.txt
 
 
-# Copy the efinity directory to the container
+# Copy the efinity directory to the image
 COPY ./efinity /efinity
 
 # Install python packages
@@ -59,7 +59,7 @@ COPY ./efinity/2023.2/lib/python3.11/site-packages/projectdb-1.0.dist-info /usr/
 
 RUN pip3 install -r /tmp/requirements.txt
 
-# set container env variables
+# set env variables in the image
 ENV EFINITY_HOME="/efinity/2023.2"
 
 ENV EFXPT_HOME="${EFINITY_HOME}/pt"
