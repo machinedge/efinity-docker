@@ -1,0 +1,17 @@
+# --------------------------------------------------------
+# Copyright (c) 2024 MachinEdge LLC
+#
+# Author:
+#   shyam@machineedge.io
+#
+# Description:
+#  Compose for Efinity 2023.2
+# --------------------------------------------------------
+
+version: '3.8'
+services:
+  efinity:
+    image: efinity:2023.2
+    build:
+      context: .
+      dockerfile: Dockerfile
